@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		2063BE9C23586CB10019E3D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2063BE9A23586CB10019E3D7 /* Main.storyboard */; };
 		2063BE9E23586CB20019E3D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2063BE9D23586CB20019E3D7 /* Assets.xcassets */; };
 		2063BEA123586CB20019E3D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2063BE9F23586CB20019E3D7 /* LaunchScreen.storyboard */; };
+		2063BEAB235872CF0019E3D7 /* NibIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2063BEAA235872CF0019E3D7 /* NibIdentifiable.swift */; };
 		9E13D37FE717C4BBF955FE9C /* Pods_GoogleAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 294932E448C53A6A569B0690 /* Pods_GoogleAPI.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		2063BE9D23586CB20019E3D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2063BEA023586CB20019E3D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2063BEA223586CB20019E3D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2063BEAA235872CF0019E3D7 /* NibIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibIdentifiable.swift; sourceTree = "<group>"; };
 		294932E448C53A6A569B0690 /* Pods_GoogleAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D0AAA39D75D5827E1E0C125 /* Pods-GoogleAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleAPI.debug.xcconfig"; path = "Target Support Files/Pods-GoogleAPI/Pods-GoogleAPI.debug.xcconfig"; sourceTree = "<group>"; };
 		3483EFA13FF686359F411E5F /* Pods-GoogleAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleAPI.release.xcconfig"; path = "Target Support Files/Pods-GoogleAPI/Pods-GoogleAPI.release.xcconfig"; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		2063BE9323586CB10019E3D7 /* GoogleAPI */ = {
 			isa = PBXGroup;
 			children = (
+				2063BEAC2358736A0019E3D7 /* Application */,
 				2063BE9423586CB10019E3D7 /* AppDelegate.swift */,
 				2063BE9823586CB10019E3D7 /* ViewController.swift */,
 				2063BE9A23586CB10019E3D7 /* Main.storyboard */,
@@ -71,13 +74,44 @@
 			path = GoogleAPI;
 			sourceTree = "<group>";
 		};
+		2063BEA8235872AF0019E3D7 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				2063BEA9235872C20019E3D7 /* Protocols */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		2063BEA9235872C20019E3D7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2063BEAA235872CF0019E3D7 /* NibIdentifiable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2063BEAC2358736A0019E3D7 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				2063BEAD235873750019E3D7 /* UI */,
+				2063BEA8235872AF0019E3D7 /* Utility */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		2063BEAD235873750019E3D7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		24E55C5F6DF4C0BCEDA0C328 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				2D0AAA39D75D5827E1E0C125 /* Pods-GoogleAPI.debug.xcconfig */,
 				3483EFA13FF686359F411E5F /* Pods-GoogleAPI.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -222,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2063BEAB235872CF0019E3D7 /* NibIdentifiable.swift in Sources */,
 				2063BE9923586CB10019E3D7 /* ViewController.swift in Sources */,
 				2063BE9523586CB10019E3D7 /* AppDelegate.swift in Sources */,
 			);
