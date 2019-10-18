@@ -37,7 +37,6 @@ class SpreadsheetViewController: UIViewController {
             }
         }
     }
-    
 }
 
 extension SpreadsheetViewController: UITableViewDataSource {
@@ -53,10 +52,17 @@ extension SpreadsheetViewController: UITableViewDataSource {
         }
         let sheet = viewModel.sheet?.values[indexPath.row]
         
+        if indexPath.row == 0 {
+            cell.backgroundColor = .lightGray
+        }
+        
         cell.nameLabel.text = sheet?[0]
         cell.priceLabel.text = sheet?[1]
         cell.dateLabel.text = sheet?[2]
         
         return cell
     }
+}
+
+extension SpreadsheetViewController: UITableViewDelegate {
 }
