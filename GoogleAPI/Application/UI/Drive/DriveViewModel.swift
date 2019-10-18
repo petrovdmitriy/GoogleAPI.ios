@@ -21,8 +21,6 @@ class DriveViewModel {
         URLSession.shared.dataTask(with: request) { data, _, _ in
             guard let jsonData = data else { return }
             
-            let str = jsonData.prettyPrintedJSONString!
-            
             let decoder = JSONDecoder()
             guard let fileResponse = try? decoder.decode(FileResponse.self, from: jsonData) else {
                 return
@@ -46,7 +44,7 @@ extension Data {
 
 extension DriveViewModel {
     private func getStringURL(withToken token: String) -> String {
-        var url = "https://www.googleapis.com/drive/v3/files/"
+        let url = "https://www.googleapis.com/drive/v3/files/"
         return url + "?access_token=" + token + "&q=mimeType='application/vnd.google-apps.spreadsheet'"
     }
 }
