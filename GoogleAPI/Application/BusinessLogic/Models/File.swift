@@ -6,14 +6,14 @@
 //  Copyright © 2019 BytePace. All rights reserved.
 //
 
-struct DriveFileResponse: Decodable {
+struct FileResponse: Decodable {
     var kind: String
-    var files: [DriveFile]
+    var files: [File]
 }
 
-struct DriveFile: Decodable {
+struct File: Decodable {
+    var mimeType: String
     var id: String
     var kind: String
-    var mimeType: String
     var name: String
 }

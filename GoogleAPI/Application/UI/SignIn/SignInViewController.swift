@@ -27,6 +27,9 @@ class SignInViewController: UIViewController {
         
         googleSignInButton.layer.masksToBounds = true
         googleSignInButton.layer.cornerRadius = 6.0
+        
+        googleSignOutButton.layer.masksToBounds = true
+        googleSignOutButton.layer.cornerRadius = 6.0
     }
     
     private func setupServices() {

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DriveViewController" customModule="GoogleAPI" customModuleProvider="target">
+            <connections>
+                <outlet property="googleSignOutButton" destination="M02-6b-xOA" id="JcV-NL-iQZ"/>
+                <outlet property="tableView" destination="iDr-au-WqQ" id="40c-Ef-pno"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iEg-Yo-Byg">
+                    <rect key="frame" x="0.0" y="762" width="414" height="100"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M02-6b-xOA" userLabel="Google Sign Out">
+                            <rect key="frame" x="100" y="25" width="214" height="50"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="hja-9f-N3p"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <state key="normal" title="Google Sign Out">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="signOutButtonTapped:" destination="-1" eventType="touchUpInside" id="uPh-Qq-xPN"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="M02-6b-xOA" secondAttribute="bottom" constant="25" id="1f8-It-7ls"/>
+                        <constraint firstItem="M02-6b-xOA" firstAttribute="top" secondItem="iEg-Yo-Byg" secondAttribute="top" constant="25" id="Fqz-YG-JxN"/>
+                        <constraint firstItem="M02-6b-xOA" firstAttribute="leading" secondItem="iEg-Yo-Byg" secondAttribute="leading" constant="100" id="KkK-AI-dd0"/>
+                        <constraint firstAttribute="trailing" secondItem="M02-6b-xOA" secondAttribute="trailing" constant="100" id="XVV-v9-vw2"/>
+                        <constraint firstAttribute="height" constant="100" id="uzv-Tt-dor"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iDr-au-WqQ">
+                    <rect key="frame" x="0.0" y="44" width="414" height="718"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="iDr-au-WqQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="073-v1-Ct8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iDr-au-WqQ" secondAttribute="trailing" id="6zP-ZV-4m7"/>
+                <constraint firstItem="iEg-Yo-Byg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="KZc-OT-CON"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iEg-Yo-Byg" secondAttribute="trailing" id="hwQ-3f-iBk"/>
+                <constraint firstItem="iDr-au-WqQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="qEl-Ho-uha"/>
+                <constraint firstItem="iEg-Yo-Byg" firstAttribute="top" secondItem="iDr-au-WqQ" secondAttribute="bottom" id="wtv-6x-JZn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="iEg-Yo-Byg" secondAttribute="bottom" id="xmE-ga-YF1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="42" y="154"/>
+        </view>
+    </objects>
+</document>

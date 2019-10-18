@@ -16,8 +16,11 @@ class GoogleService: NSObject {
     }
     
     func signOut() {
-        GIDSignIn.sharedInstance().signOut()
         GoogleService.accessToken = ""
+        GIDSignIn.sharedInstance().signOut()
+        DispatchQueue.main.async {
+            UIApplication.shared.keyWindow?.rootViewController = SignInViewController.initFromNib()
+        }
     }
     
     func restorePreviousSignIn() {
@@ -67,12 +70,10 @@ extension GoogleService: GIDSignInDelegate {
         }
         self.setAccessToken()
         
-        let vc = SignInViewController.initFromNib()
-        UIApplication.shared.keyWindow?
-            .rootViewController = UINavigationController(rootViewController: vc)
-    }
-    
-    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-        UIApplication.shared.keyWindow?.rootViewController = SignInViewController.initFromNib()
+        let vc = DriveViewController.initFromNib()
+        DispatchQueue.main.async {
+            UIApplication.shared.keyWindow?
+                .rootViewController = UINavigationController(rootViewController: vc)
+        }
     }
 }
