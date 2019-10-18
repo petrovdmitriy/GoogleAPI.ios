@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInViewController" customModule="GoogleAPI" customModuleProvider="target">
+            <connections>
+                <outlet property="googleSignInButton" destination="tlV-xC-Nnb" id="WiR-2O-0YP"/>
+                <outlet property="googleSignOutButton" destination="gGU-oY-fQA" id="cvm-mG-52y"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlV-xC-Nnb">
+                    <rect key="frame" x="100" y="539.5" width="214" height="50"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="29k-rw-Api"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Google Sign In">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="signInButtonTapped:" destination="-1" eventType="touchUpInside" id="oRY-mz-yTW"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GoogleAPI iOS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkP-UG-M64">
+                    <rect key="frame" x="80" y="294" width="254" height="45.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGU-oY-fQA" userLabel="Google Sign Out">
+                    <rect key="frame" x="100" y="539.5" width="214" height="50"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="v6e-LS-R6h"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Google Sign Out">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="signOutButtonTapped:" destination="-1" eventType="touchUpInside" id="mE0-Ps-pAb"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="VkP-UG-M64" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="80" id="0tU-SL-yof"/>
+                <constraint firstItem="gGU-oY-fQA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="1sR-nM-zr5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tlV-xC-Nnb" secondAttribute="trailing" constant="100" id="2Ty-eI-6xV"/>
+                <constraint firstItem="tlV-xC-Nnb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="AXl-79-wDe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VkP-UG-M64" secondAttribute="trailing" constant="80" id="F4u-Pu-nwx"/>
+                <constraint firstItem="gGU-oY-fQA" firstAttribute="top" secondItem="VkP-UG-M64" secondAttribute="bottom" constant="200" id="IYr-hZ-lZW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gGU-oY-fQA" secondAttribute="trailing" constant="100" id="O0c-X2-0bz"/>
+                <constraint firstItem="VkP-UG-M64" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="250" id="VK5-Yk-7zl"/>
+                <constraint firstItem="tlV-xC-Nnb" firstAttribute="top" secondItem="VkP-UG-M64" secondAttribute="bottom" constant="200" id="b7f-MP-80e"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
+        </view>
+    </objects>
+</document>

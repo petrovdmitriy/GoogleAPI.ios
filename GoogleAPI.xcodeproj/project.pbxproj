@@ -13,6 +13,12 @@
 		2063BE9E23586CB20019E3D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2063BE9D23586CB20019E3D7 /* Assets.xcassets */; };
 		2063BEA123586CB20019E3D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2063BE9F23586CB20019E3D7 /* LaunchScreen.storyboard */; };
 		2063BEAB235872CF0019E3D7 /* NibIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2063BEAA235872CF0019E3D7 /* NibIdentifiable.swift */; };
+		2063BEB0235873B50019E3D7 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2063BEAE235873B50019E3D7 /* SignInViewController.swift */; };
+		2063BEB1235873B50019E3D7 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2063BEAF235873B50019E3D7 /* SignInViewController.xib */; };
+		2063BEB523588E2A0019E3D7 /* GoogleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2063BEB423588E2A0019E3D7 /* GoogleService.swift */; };
+		2063BEB7235895930019E3D7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2063BEB6235895930019E3D7 /* Router.swift */; };
+		20B4537C235998D100389977 /* DriveFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B4537B235998D100389977 /* DriveFile.swift */; };
+		20B4537E235998EB00389977 /* Spreadsheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B4537D235998EB00389977 /* Spreadsheet.swift */; };
 		9E13D37FE717C4BBF955FE9C /* Pods_GoogleAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 294932E448C53A6A569B0690 /* Pods_GoogleAPI.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +31,12 @@
 		2063BEA023586CB20019E3D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2063BEA223586CB20019E3D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2063BEAA235872CF0019E3D7 /* NibIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibIdentifiable.swift; sourceTree = "<group>"; };
+		2063BEAE235873B50019E3D7 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		2063BEAF235873B50019E3D7 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
+		2063BEB423588E2A0019E3D7 /* GoogleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleService.swift; sourceTree = "<group>"; };
+		2063BEB6235895930019E3D7 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		20B4537B235998D100389977 /* DriveFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveFile.swift; sourceTree = "<group>"; };
+		20B4537D235998EB00389977 /* Spreadsheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spreadsheet.swift; sourceTree = "<group>"; };
 		294932E448C53A6A569B0690 /* Pods_GoogleAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D0AAA39D75D5827E1E0C125 /* Pods-GoogleAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleAPI.debug.xcconfig"; path = "Target Support Files/Pods-GoogleAPI/Pods-GoogleAPI.debug.xcconfig"; sourceTree = "<group>"; };
 		3483EFA13FF686359F411E5F /* Pods-GoogleAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleAPI.release.xcconfig"; path = "Target Support Files/Pods-GoogleAPI/Pods-GoogleAPI.release.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +105,7 @@
 		2063BEAC2358736A0019E3D7 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				2063BEB223588E060019E3D7 /* BusinessLogic */,
 				2063BEAD235873750019E3D7 /* UI */,
 				2063BEA8235872AF0019E3D7 /* Utility */,
 			);
@@ -102,8 +115,37 @@
 		2063BEAD235873750019E3D7 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2063BEAE235873B50019E3D7 /* SignInViewController.swift */,
+				2063BEAF235873B50019E3D7 /* SignInViewController.xib */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		2063BEB223588E060019E3D7 /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				20B4537A235998C600389977 /* Models */,
+				2063BEB323588E1B0019E3D7 /* Services */,
+				2063BEB6235895930019E3D7 /* Router.swift */,
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		2063BEB323588E1B0019E3D7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2063BEB423588E2A0019E3D7 /* GoogleService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		20B4537A235998C600389977 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				20B4537B235998D100389977 /* DriveFile.swift */,
+				20B4537D235998EB00389977 /* Spreadsheet.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		24E55C5F6DF4C0BCEDA0C328 /* Pods */ = {
@@ -184,6 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2063BEB1235873B50019E3D7 /* SignInViewController.xib in Resources */,
 				2063BEA123586CB20019E3D7 /* LaunchScreen.storyboard in Resources */,
 				2063BE9E23586CB20019E3D7 /* Assets.xcassets in Resources */,
 				2063BE9C23586CB10019E3D7 /* Main.storyboard in Resources */,
@@ -256,8 +299,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2063BEB0235873B50019E3D7 /* SignInViewController.swift in Sources */,
+				2063BEB523588E2A0019E3D7 /* GoogleService.swift in Sources */,
 				2063BEAB235872CF0019E3D7 /* NibIdentifiable.swift in Sources */,
 				2063BE9923586CB10019E3D7 /* ViewController.swift in Sources */,
+				20B4537E235998EB00389977 /* Spreadsheet.swift in Sources */,
+				20B4537C235998D100389977 /* DriveFile.swift in Sources */,
+				2063BEB7235895930019E3D7 /* Router.swift in Sources */,
 				2063BE9523586CB10019E3D7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
