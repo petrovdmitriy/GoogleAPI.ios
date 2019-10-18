@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SpreadsheetViewController" customModule="GoogleAPI" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="n1p-wc-63b" id="D3W-72-QTH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

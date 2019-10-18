@@ -18,9 +18,8 @@ class DriveViewModel {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         
-        URLSession.shared.dataTask(with: request) { data, response, error in
+        URLSession.shared.dataTask(with: request) { data, _, _ in
             guard let jsonData = data else { return }
-            guard let jsonResponse = response else { return }
             
             let str = jsonData.prettyPrintedJSONString!
             
