@@ -4,6 +4,7 @@ PODS:
     - AppAuth/ExternalUserAgent (= 1.2.0)
   - AppAuth/Core (1.2.0)
   - AppAuth/ExternalUserAgent (1.2.0)
+  - Fakery (4.1.1)
   - GoogleSignIn (5.0.0):
     - AppAuth (~> 1.1)
     - GTMAppAuth (~> 1.0)
@@ -18,21 +19,24 @@ PODS:
     - GTMSessionFetcher/Core (= 1.2.2)
 
 DEPENDENCIES:
+  - Fakery
   - GoogleSignIn
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AppAuth
+    - Fakery
     - GoogleSignIn
     - GTMAppAuth
     - GTMSessionFetcher
 
 SPEC CHECKSUMS:
   AppAuth: bce82c76043657c99d91e7882e8a9e1a93650cd4
+  Fakery: d3380c4aa1efe7631c0831d7e26aa9db4491f014
   GoogleSignIn: a62edd0516721d2a3db1259a5681b91f9b41c06a
   GTMAppAuth: 4deac854479704f348309e7b66189e604cf5e01e
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
 
-PODFILE CHECKSUM: 0c8df7713527da06b0b20aed7a5ee0a8204d28ee
+PODFILE CHECKSUM: 4ae0ca6fa6a6df99bc52c75e024f0dcf51d2e0d7
 
 COCOAPODS: 1.7.5

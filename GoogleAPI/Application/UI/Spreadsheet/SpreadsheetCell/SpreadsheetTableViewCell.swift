@@ -1,5 +1,5 @@
 //
-//  DriveTableViewCell.swift
+//  SpreadsheetTableViewCell.swift
 //  GoogleAPI
 //
 //  Created by Dmitriy Petrov on 18/10/2019.
@@ -8,14 +8,10 @@
 
 import UIKit
 
-class DriveTableViewCell: UITableViewCell {
-    @IBOutlet weak var nameLabel: UILabel!
+class SpreadsheetTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        nameLabel.layer.masksToBounds = true
-        nameLabel.layer.cornerRadius = 6.0
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

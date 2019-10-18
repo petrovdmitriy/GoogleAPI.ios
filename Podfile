@@ -6,5 +6,6 @@ target 'GoogleAPI' do
 
   # Pods for GoogleAPI
   pod 'GoogleSignIn'
+  pod 'Fakery'
 
 end
