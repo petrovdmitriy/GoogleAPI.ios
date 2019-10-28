@@ -9,7 +9,18 @@
 import GoogleSignIn
 
 class GoogleService: NSObject {
+    
+    
     static var accessToken: String = ""
+    
+    func setAccessToken() {
+        guard let accessToken = GIDSignIn.sharedInstance()?.currentUser.authentication.accessToken else {
+            fatalError()
+        }
+        GoogleService.accessToken = accessToken
+    }
+    
+    
     
     func signIn() {
         GIDSignIn.sharedInstance().signIn()
@@ -42,12 +53,7 @@ class GoogleService: NSObject {
         GIDSignIn.sharedInstance().scopes = scopes
     }
     
-    func setAccessToken() {
-        guard let accessToken = GIDSignIn.sharedInstance()?.currentUser.authentication.accessToken else {
-            fatalError()
-        }
-        GoogleService.accessToken = accessToken
-    }
+
     
     func setClientID(withID id: String) {
         GIDSignIn.sharedInstance().clientID = id

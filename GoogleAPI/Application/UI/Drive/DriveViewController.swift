@@ -27,6 +27,8 @@ class DriveViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
+        self.title = "Spreadsheets"
+        
         googleSignOutButton.layer.masksToBounds = true
         googleSignOutButton.layer.cornerRadius = 6.0
     }
