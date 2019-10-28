@@ -54,12 +54,12 @@ class SpreadsheetViewModel {
             request.httpBody = parameteres
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             
-            URLSession.shared.dataTask(with: request) { data, response, error in
-                guard let data = data else { return }
+            URLSession.shared.dataTask(with: request) { _, response, _ in
                 guard let response = response else { return }
                 
                 completion(response)
-            }.resume()
+            }
+            .resume()
         }
     }
 }
@@ -91,7 +91,7 @@ extension SpreadsheetViewModel {
         getSpreadsheet(withID: id, withToken: token) { sheet in
             guard let rows = sheet?.values.count else { return }
             
-            let range = String("A\(rows):C\(rows)")
+            let range = String("A\(rows + 1):C\(rows + 1)")
             
             completion(range)
         }
